@@ -1,0 +1,9 @@
+.demo-card-square > .mdl-card__title {
+  color: #fff;
+  background: url(/images/dog.png?34b4fd0f171342f075f0e5a5b328f088) bottom right 15% no-repeat #46B6AC;
+}
+
+a > .amodal {
+  color: white;
+}
+
