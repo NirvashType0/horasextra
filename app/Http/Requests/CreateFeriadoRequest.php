@@ -25,7 +25,8 @@ class CreateFeriadoRequest extends FormRequest
     {
         return [
             'descripcion' => 'required',
-            'fecha' => 'required'
+            'mes' => 'required|numeric',
+            'dia' => 'required|numeric'
         ];
     }
 }

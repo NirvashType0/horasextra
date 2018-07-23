@@ -83,8 +83,8 @@ module.exports = __webpack_require__(3);
  * application frontend using useful Laravel and JavaScript libraries.
  */
 $(document).ready(function () {
-    $('#datetimepicker4').datetimepicker({
-        format: 'L'
+    $('.datepicker').datepicker({
+        format: 'mm/dd/yyyy'
     });
     $('.modal').on('hidden.bs.modal', function (e) {
         $(this).removeData();

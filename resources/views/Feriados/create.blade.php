@@ -14,14 +14,14 @@
             {!! $errors->first('descripcion','<span class=error>:message</span>')!!}
         </div>
         <div class="form-group">
-            <label for="fecha">Fecha</label>
-            <div class="input-group date form-control" id="datetimepicker4" data-target-input="nearest">
-                <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker4" name="fecha"/>
-                <div class="input-group-append" data-target="#datetimepicker4" data-toggle="datetimepicker">
-                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                </div>
-            </div>
-            {!! $errors->first('fecha','<span class=error>:message</span>')!!}
+            <label for="dia">Dia</label>
+            <input type="text" class="form-control" name="dia">
+            {!! $errors->first('dia','<span class=error>:message</span>')!!}
+        </div>
+        <div class="form-group">
+            <label for="mes">Mes</label>
+            <input type="text" class="form-control" name="mes">
+            {!! $errors->first('mes','<span class=error>:message</span>')!!}
         </div>
       </div>
       <div class="modal-footer">

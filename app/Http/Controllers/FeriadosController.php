@@ -35,7 +35,6 @@ class FeriadosController extends Controller
      */
     public function create()
     {
-        Log::info('This is some useful information.');
         return view('Feriados.create',[
             'route' => route('Feriados.store'),
             'model' => Feriado::class,
@@ -76,7 +75,12 @@ class FeriadosController extends Controller
     public function edit($id)
     {
         $feriado = Feriado::findOrFail($id);
-        return view('Feriados.edit', compact('feriado'));
+        return view('Feriados.edit',[
+            'route' => route('Feriados.update',$id),
+            'model' => Feriado::class,
+            'action' => 'edit',
+            'feriado' => $feriado
+        ])->render();
     }
 
     /**

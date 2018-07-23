@@ -1,9 +1,4 @@
 @extends('layouts.layout')
-@section('hrds')
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/js/tempusdominus-bootstrap-4.min.js"></script>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.1/css/tempusdominus-bootstrap-4.min.css" />
-@stop
 <meta name="_token" content="{{ csrf_token() }}"/>
 @section('content')
 	<div class="mdl-grid">
@@ -19,7 +14,6 @@
 			</a>
 		</div>
 		<div class="mdl-cell mdl-cell--3-col">
-			
 		</div>
 		<div class="mdl-cell mdl-cell--3-col">
 			<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
@@ -36,29 +30,23 @@
 		<div class="mdl-cell mdl-cell--3-col" >
 		</div>
 	    <div class="mdl-cell mdl-cell--6-col" >
-	      <table class="table table-striped table-dark">
+	      <table class="table table-striped">
 	        <thead>
 	          <tr>
 	            <th scope="col">DESCRIPCION</th>
-	            <th scope="col">FECHA</th>
-	            <th scope="col" colspan="3">ACCIONES</th>
+	            <th scope="col" colspan="2">FECHA</th>
+	            <th scope="col" colspan="2">ACCIONES</th>
 	          </tr>
 	        </thead>
 	        <tbody>
 	          @foreach ($feriados as $feriado)
 	            <tr>
 	              	<td>{{ $feriado->descripcion }}</td>
-	              	<td>{{ $feriado->fecha }}</td>
-	              	<td>
-						<a href="{{ route('Feriados.show', $feriado->id)}}" class="amodal">
-							<button type="submit" class="mdl-button mdl-js-button mdl-button--icon">
-							  <i class="material-icons">pageview</i>
-							</button>
-						</a>
-					</td>
+	              	<td>{{ $feriado->dia }}/</td>
+	              	<td>{{ $feriado->mes }}</td>
 					<td>
-						<a href="{{ route('Feriados.edit', $feriado->id)}}" class="amodal" data-toggle="modal" data-target="#mainm">
-							<button type="submit" class="mdl-button mdl-js-button mdl-button--icon">
+						<a href="{{ route('Feriados.edit', $feriado->id)}}" class="show_modal_form">
+							<button class="mdl-button mdl-js-button mdl-button--icon">
 							  <i class="material-icons">edit</i>
 							</button>
 						</a>
